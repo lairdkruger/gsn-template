@@ -1,6 +1,5 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
-
 .root {}
 
 .title {
@@ -11,7 +10,6 @@
   position: relative;
   background: #eee;
   padding-bottom: calc(9 / 16 * 100%);
-
   @nest & img {
     position: absolute;
     top: 0;
@@ -27,7 +25,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2em;
-
   @media (--media-min-medium) {
     grid-template-columns: 3fr 1fr;
   }
@@ -36,7 +33,6 @@
 .mainContent {
   @nest & a {
     color: var(--color-accent);
-
     @media (hover: hover) {
       @nest &:hover {
         color: inherit;
@@ -45,8 +41,7 @@
   }
 }
 
-.metaContent {
-}
+.metaContent {}
 
 .publishedAt {
   composes: small from './typography.module.css';
@@ -57,13 +52,11 @@
 .categories {
   border-top: 1px solid var(--color-very-light-gray);
   margin: 2rem 0 3rem;
-
   @nest & ul {
     list-style: none;
     margin: 0.75rem 0;
     padding: 0;
   }
-
   @nest & ul li {
     padding: 0.25rem 0;
   }
@@ -77,13 +70,11 @@
 .relatedProjects {
   border-top: 1px solid var(--color-very-light-gray);
   margin: 2rem 0 3rem;
-
   @nest & ul {
     list-style: none;
     margin: 0.75rem 0;
     padding: 0;
   }
-
   @nest & a {
     display: inline-block;
     color: inherit;

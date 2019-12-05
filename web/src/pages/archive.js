@@ -1,13 +1,13 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../lib/helpers'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
-import {responsiveTitle1} from '../components/typography.module.css'
+import { responsiveTitle1 } from '../components/typography.module.css'
 
 export const query = graphql`
   query ArchivePageQuery {
@@ -37,7 +37,7 @@ export const query = graphql`
 `
 
 const ArchivePage = props => {
-  const {data, errors} = props
+  const { data, errors } = props
   if (errors) {
     return (
       <Layout>
